@@ -1,4 +1,4 @@
-package ru.otus.example.exceptions;
+package ru.otus.example.images.exceptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

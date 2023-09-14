@@ -17,7 +17,7 @@ spring:
 
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/otus?useUnicode=true&characterEncoding=UTF8
+    url: jdbc:postgresql://192.168.2.9:5432/otus?useUnicode=true&characterEncoding=UTF8
     username: postgres
     password: postgres
   #  h2:
@@ -46,4 +46,4 @@ logging:
 
 upload:
   image-path:
-    photo:  "C:\\temp\\photo"
+    photo:  "/opt/upload/photo"

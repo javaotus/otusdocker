@@ -1,6 +1,6 @@
 package ru.otus.example.images.controllers;
 
-import ru.otus.example.exceptions.UnsupportedMediaTypeException;
+import ru.otus.example.images.exceptions.UnsupportedMediaTypeException;
 import ru.otus.example.images.services.ImageService;
 
 import jakarta.persistence.NoResultException;

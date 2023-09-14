@@ -1,7 +1,7 @@
 package ru.otus.example.images.services;
 
-import ru.otus.example.exceptions.FileNotFoundException;
-import ru.otus.example.exceptions.UnsupportedMediaTypeException;
+import ru.otus.example.images.exceptions.FileNotFoundException;
+import ru.otus.example.images.exceptions.UnsupportedMediaTypeException;
 import ru.otus.example.images.persistence.entities.Image;
 import ru.otus.example.images.persistence.repositories.ImageRepository;
 

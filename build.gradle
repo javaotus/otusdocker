@@ -2,13 +2,15 @@ plugins {
 	id "org.springframework.boot" version "3.0.6"
 	id "io.spring.dependency-management" version "1.0.8.RELEASE"
 	id "java"
+	id "com.google.cloud.tools.jib" version "3.3.2"
 }
+
+apply plugin: "com.google.cloud.tools.jib"
 
 apply plugin: "java"
 apply plugin: "io.spring.dependency-management"
 
-group = "com.flober.api"
-version = "0.0.1"
+version = "0.0.3"
 description = "image-api"
 
 repositories {
@@ -24,6 +26,21 @@ def springBootVersion = "3.0.6"
 ext {
 	set('springCloudVersion', "2022.0.2")
 }
+
+jib {
+	from {
+		image = "bellsoft/liberica-openjdk-alpine-musl:17.0.2-9"
+	}
+	to {
+		image = 'localhost:5000/javaotus/image-api'
+		tags = [version]
+	}
+	container {
+		mainClass = "ru.otus.example.images.ImageApiApplication"
+	}
+}
+
+jib.to.image = "javaotus/${rootProject.name}"
 
 dependencies {
 
