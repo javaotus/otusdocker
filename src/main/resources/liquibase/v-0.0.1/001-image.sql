@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS image (
+    id uuid NOT NULL CONSTRAINT PK_image PRIMARY KEY,
+    created TIMESTAMP DEFAULT now() NOT NULL,
+    name VARCHAR(255)               NOT NULL UNIQUE
+);
